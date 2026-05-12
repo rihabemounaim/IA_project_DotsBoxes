@@ -9,10 +9,10 @@ Travail de groupe : **4 etudiants par groupe**.
 Remplir cette section avant le rendu :
 
 - Groupe : `WarSquare`
-- Etudiant 1 (Nom Prenom) : `AGWANIHU CHIBUAKOM Paul daniel`
-- Etudiant 2 (Nom Prenom) : `OUAIL ZOUINA`
-- Etudiant 3 (Nom Prenom) : `MOUNAIM Rihabe `
-- Etudiant 4 (Nom Prenom) : `HINDA BEDDERI Monir`
+- Etudiant 1 : `MOUNAIM Rihabe `
+- Etudiant 2 : `OUAIL ZOUINA`
+- Etudiant 3 : `AGWANIHU CHIBUAKOM Paul daniel `
+- Etudiant 4 : `HINDA BEDDERI Monir`
 
 ## 1. Pre-requis
 
