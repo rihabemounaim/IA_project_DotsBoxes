@@ -1,0 +1,35 @@
+name: Generer Javadoc
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Récupérer le code du dépôt
+      - uses: actions/checkout@v4
+
+      # 2. Installer Java 17 (requis par votre projet)
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      # 3. Générer la Javadoc en ignorant les erreurs de syntaxe/liens
+      - name: Run Maven Javadoc
+        run: mvn javadoc:javadoc -Ddoclint=none -Dmaven.javadoc.failOnError=false
+
+      # 4. Sauvegarder le dossier de documentation (Artifact)
+      - name: Upload Javadoc Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: javadoc-html
+          # Utilisation du chemin spécifique aux versions récentes de Maven
+          path: target/reports/apidocs/
